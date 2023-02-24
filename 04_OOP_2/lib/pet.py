@@ -8,6 +8,7 @@ class Pet:
 # 4. ✅ Define a class attribute (total_pets) and set it to 0
 
     # Class Attribute
+    total_pets = 0
 
     # What happens with our instances when we update a class attribute?
 
@@ -16,6 +17,7 @@ class Pet:
         self.age = age
         self.breed = breed
         self.temperament = temperament
+        Pet.increase_pets()
 
 # ipdb.set_trace()
 
@@ -28,14 +30,17 @@ class Pet:
     # replace Pet.total_pets += 1 in __init__ with increase_pets()
 
     # Instance Method
-    # def print_pet_details(self):
-    #     print(f'''
-    #         name:{self.name}
-    #         age:{self.age}
-    #         breed:{self.breed}
-    #         temperament:{self.temperament}
-    #     ''')
+    def print_pet_details(self):
+        print(f'''
+            name:{self.name}
+            age:{self.age}
+            breed:{self.breed}
+            temperament:{self.temperament}
+        ''')
 
     # Class Method
+    @classmethod
+    def increase_pets(cls):
+        cls.total_pets += 1
 
-# ipdb.set_trace()
+ipdb.set_trace()
