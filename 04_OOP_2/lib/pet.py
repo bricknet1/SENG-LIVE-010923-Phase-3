@@ -43,4 +43,4 @@ class Pet:
     def increase_pets(cls):
         cls.total_pets += 1
 
-ipdb.set_trace()
+# ipdb.set_trace()
